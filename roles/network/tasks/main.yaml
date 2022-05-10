@@ -11,12 +11,14 @@
     src: /var/www/html/config/raspap-bridge-br0.netdev
     dest: /etc/systemd/network/raspap-bridge-br0.netdev
     remote_src: yes
+  when: not skip_systemd
 
 - name: Copy bridge member to systemd network folder
   copy:
     src: /var/www/html/config/raspap-br0-member-eth0.network
     dest: /etc/systemd/network/raspap-br0-member-eth0.network
     remote_src: yes
+  when: not skip_systemd
 
 - name: Enable ip forwarding
   copy:
