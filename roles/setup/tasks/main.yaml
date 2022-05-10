@@ -14,6 +14,7 @@
       - iw
       - dhcpcd5
       - php7.3-cgi
+      - wpasupplicant
 
 - name: Remove html directory
   file:
