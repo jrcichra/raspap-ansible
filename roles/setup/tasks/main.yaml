@@ -13,7 +13,7 @@
       - wireless-tools
       - iw
       - dhcpcd5
-      - php7.4-cgi
+      - php7.3-cgi
 
 - name: Remove html directory
   file:
