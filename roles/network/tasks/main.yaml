@@ -33,6 +33,7 @@
 
 - name: Enable ip forwarding for current session (procps)
   command: /etc/init.d/procps restart
+  when: not skip_systemd
 
 - name: Enable traffic between clients on the WLAN and the internet (1)
   iptables:
